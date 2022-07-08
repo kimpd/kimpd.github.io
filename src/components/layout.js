@@ -9,10 +9,10 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
-import Header from "./header"
-import "./layout.css"
+import Header from "./Header"
+import "./Layout.css"
 
-const Layout = ({ children }) => {
+const Layout = ({ pageTitle, children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -25,25 +25,28 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        <footer
-          style={{
-            marginTop: `2rem`,
-          }}
-        >
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
+    <div id="page" class="site style-overflow palette-blue">
+      <Header pageTitle={pageTitle} />
+      <div id="content" class="site-content">
+        <div class="inner">
+          <main>{children}</main>
+          <footer id="colophon" class="site-footer inner-sm">
+            <p class="site-info">
+              <span class="copyright">
+                &copy; {new Date().getFullYear()}, KimPD. All rights reserved.
+                Built with {`   `} <a href="https://www.gatsbyjs.com" target="_blank">Gatsby</a>
+              </span>
+            </p>
+            <a id="to-top" class="to-top" href="#page">
+              <span class="icon-arrow-up" aria-hidden="true"></span>
+              <span class="screen-reader-text">Back to top</span>
+            </a>
+          </footer>
+        </div>
       </div>
+    </div>
+    {/* <script src="../../js/toggle-menu.js"></script> */}
+    {/* <img src="../../img/KimPD.jpg" /> */}
     </>
   )
 }
