@@ -12,7 +12,7 @@ function DevLogPage() {
         <header class="post-header inner-sm">
           <h1 class="post-title underline">📑 DevLog</h1>
           <div class="block-content inner-sm">
-            <p>개발에 대한 나의 생각</p>
+            <p>수작업 개발에 대한 나의 생각</p>
           </div>
         </header>
       </section>
@@ -27,7 +27,7 @@ function DevLogPage() {
         <h2 class="block-title underline inner-sm">새로운 시작은 항상 설레고 흥미롭다.</h2>
         <div class="block-content inner-sm">
           개발은 새로운 문제에 대한 고찰과 해결의 과정을 반복한다.<br />
-          반복되는 지루함과 게으름은 언제나 위기를 가져왔다.<br />
+          하지만 반복되는 지루함과 게으름은 언제나 위기를 가져왔다.<br />
         </div>
         <br />
         <br />
@@ -48,7 +48,7 @@ function DevLogPage() {
         <h2 class="block-title underline inner-sm">틀린 그림 찾기.</h2>
         <div class="block-content inner-sm">
           아날로그 vs. 디지털 | 기계 vs. 컴퓨터 | 공단 vs. 디지털단지 | 공장 vs. 사무실 | 공돌이 vs. 개발자<br />
-          디지털단지에서 일하는 개발자의 삶은 많이 틀려 지셨습니까?<br />
+          디지털단지에서 일하는 개발자의 본질은 많이 &quot;틀려&quot;지셨습니까?<br />
         </div>
         <br />
         <br />
@@ -61,13 +61,13 @@ function DevLogPage() {
         <br />
         <h2 class="block-title underline inner-sm">잊혀짐에 대해 슬퍼하지 말자!</h2>
         <div class="block-content inner-sm">
-          내가 만든 창작물에 대한 잊혀짐에 너무 슬퍼하지 말자.<br />
-          나 자신 또한 시간이 지나면, 자연스럽게 잊혀질 것이니...<br />
+          내가 만든 창작물의 잊혀짐을 너무 슬퍼하지 말자.<br />
+          나 또한 시간이 지나면, 자연스럽게 잊혀질 것이니...<br />
         </div>
         <br />
         <br />
         <div class="block-buttons inner-sm">
-          <a href="blog/index.html" class="button">View Blog</a>
+          <a href="/" class="button">Think Stop!</a>
         </div>
     </section>
     </Layout>

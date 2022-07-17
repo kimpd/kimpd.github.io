@@ -1,9 +1,21 @@
 import * as React from "react"
+import ReactModal from "react-modal"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
+import Modal from './Modal'
 
 function Header({ pageTitle }) {
+  const [isModalOpen, setIsModalOpen] = React.useState(false);
+
+  const handleModalOpen = (event) => {
+    setIsModalOpen(true);
+  };
+
+  const handleModalClose = (event) => {
+    setIsModalOpen(false);
+  };
+
   const subPages = [
     /* <!-- 개발 완료한 프로젝트들 소개 --> */
     {"title": "Project", "link": "/project/", "menu": "Project"},
@@ -18,6 +30,7 @@ function Header({ pageTitle }) {
   ];
   
   return (
+    <>
     <header id="masthead" class="site-header dark">
       <div class="site-header-wrap">
         <div class="site-header-inside">
@@ -59,7 +72,7 @@ function Header({ pageTitle }) {
                   }
                 </ul>
                 <div class="social-links">
-                  <a href="https://twitter.com/" target="_blank" rel="noopener " class="button button-icon">
+                  <a href="#" onClick={handleModalOpen} class="button button-icon">
                     <svg class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path d="M23.954 4.569a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.691 8.094 4.066 6.13 1.64 3.161a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.061a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.937 4.937 0 004.604 3.417 9.868 9.868 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63a9.936 9.936 0 002.46-2.548l-.047-.02z" />
                     </svg>
@@ -96,7 +109,14 @@ function Header({ pageTitle }) {
         </div>
       </div>
     </header>
-    
+    <Modal
+      open={isModalOpen}
+      close={handleModalClose}
+      header="SNS는 인생의 낭비다. - 알렉스 퍼거슨"
+    >
+      <img src="../../img/twitter-satire.jpg" alt="Twitter" />
+    </Modal>
+    </>
   )
 }
 

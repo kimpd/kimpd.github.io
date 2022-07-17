@@ -12,7 +12,7 @@ function ContactPage() {
       </header>
       <section id="contact-form" class="block block-form">
         <div class="block-content inner-sm">
-          <p>의뢰, 문의할 내용을 보내주세요.</p>
+          <p>문의할 내용을 보내주세요.</p>
           <form name='contactForm' id='contactForm' action='/thank-you' method='POST'>
             <div class="screen-reader-text">
               <label>
