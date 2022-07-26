@@ -24,15 +24,15 @@ const IndexPage = () => (
     <section id="about" class="block block-text">
       <h2 class="block-title underline inner-sm">프로그래밍</h2>
       <div class="block-content inner-sm">
-        <p>C, C#, Objective-C, Golang, Python, HTML, CSS, JavaScript<br /><br />
-        ❌ Java 안함(뇌용량 초과)</p>
+        <p>C, C#, Objective-C, Golang, Python, HTML, CSS, JavaScript, React<br /><br />
+        ❌ Java 안함(뇌용량 비우기)</p>
       </div>
     </section>
     <section id="about" class="block block-text">
       <h2 class="block-title underline inner-sm">데이터베이스</h2>
       <div class="block-content inner-sm">
         <p>PostgreSQL, MySQL, MSSQL, MongoDB, Redis, SQLite<br /><br />
-        ❌ Oracle 안씀(비용 초과)</p>
+        ❌ Oracle 안씀(비용 절감)</p>
       </div>
     </section>
   </Layout>
