@@ -1,0 +1,31 @@
+---
+category: "project"
+title: "SimStock"
+subject: "주식 정보분석 웹서비스"
+date: "2022-07-23"
+icon: "./SimStock-Icon.png"
+image: "./SimStock-Diagram.jpg"
+dev_period: "4개월"
+dev_os: "Web, Ubuntu 20.04 LTS, Nginx"
+dev_tech: "React, MUI 5, Next.js, JavaScript, PostgreSQL, Golang, Gin"
+---
+
+개발내용 :
+
+기존에 개발된 캐시카우 시스템의 프로그램들을 웹서비스로 구현하여,
+다수의 이용자들에게 주식 정보분석 서비스를 제공한다.
+
+시스템구성 :
+
+1. 백테스트 서비스 - 사용자가 작성한 매매 알고리즘을, 모의매매를 통해 성과검증을 진행.
+   (Web, React, MUI 5, Next.js, JavaScript, PostgreSQL, Ubuntu 20.04 LTS, Nginx)
+
+2. 연동매매 서비스 - 사용자의 로컬 또는 온라인에 설치된 윈도우용 자동매매 프로그램을,
+   심스탁 서버에서 제어권을 가지고 원격으로 매매를 관리한다.
+   (Windows 7/10, Web)
+
+3. 모바일 서비스 - 연동매매의 모니터링은 모바일 기기에도 제공된다 (개발예정).
+   (Flutter 3, Dart, RESTful API)
+
+4. 백앤드 서버 - 핵심 알고리즘 및 주요 지표값 계산, 일봉, 분봉의 DB 관리, 분석정보의 API 제공.
+   (Golang, Gin, PostgreSQL, Ubuntu 20.04 LTS, Nginx)

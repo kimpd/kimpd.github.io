@@ -7,7 +7,7 @@ import Layout from '../../components/Layout';
 import Seo from '../../components/Seo';
 
 function ProjectPost({ data }) {
-  const image = getImage(data.mdx.frontmatter.hero_image)
+  const image = getImage(data.mdx.frontmatter.image)
 
   return (
     <Layout pageTitle="Project">
@@ -31,9 +31,14 @@ export const query = graphql`
   query ($id: String) {
     mdx(id: {eq: $id}) {
       frontmatter {
+        category
         title
-        date(formatString: "MMMM D, YYYY")
-        hero_image {
+        subject
+        date(formatString: "YYYY년 MM월")
+        dev_period
+        dev_os
+        dev_tech
+        image {
           childImageSharp {
             gatsbyImageData
           }
@@ -43,27 +48,5 @@ export const query = graphql`
     }
   }
 `
-
-// query ($id: String) {
-//   allMdx(
-//     filter: {frontmatter: {category: {eq: "project"}}, id: {eq: $id}}
-//   ) {
-//     nodes {
-//       frontmatter {
-//         title
-//         date(formatString: "MMMM D, YYYY")
-//         category
-//         hero_image {
-//           childImageSharp {
-//             gatsbyImageData
-//           }
-//         }
-//       }
-//       id
-//       slug
-//       excerpt(truncate: true)
-//     }
-//   }
-// }
 
 export default ProjectPost;

@@ -1,13 +1,31 @@
 ---
 category: "project"
 title: "CoMaTo"
+subject: "글로벌 웹툰 번역을 위한 통합관리 시스템"
 date: "2015-02-14"
-hero_image: "./ComicBunch.png"
+icon: "./ComicBunch.png"
+image: "./NaverWebToon.png"
+dev_period: "8개월"
+dev_os: "Windows 7/10, Ubuntu 14.04 LTS"
+dev_tech: "C#, WPF, Django, Python, MySQL, PhotoShop, JavaScript"
 ---
-PhotoShop, JavaScript, C#, WPF, Windows
 
-글로벌 웹툰 번역 및 리터칭 시스템
+개발내용 :
 
-* 번역가 : 한국어 웹툰 번역 -> 영어, 중국어, 일본어 등.
-* 만화가 : 번역 텍스트 자동 변환후 웹툰 이미지 리터칭.
-* 검수가 : 번역 및 리터칭 완료된 웹툰 검수후 납품.
+번역가가 워드로 작성한 번역원고를 보고, 모든 번역대사를 일일히 워드에서 복사한후,
+포토샵의 문자입력 도구로 붙여넣는, 비효율적인 작업이 반복되는 상황의 개선이 필요함.
+수작업으로 복사 붙여넣기를 과정에서, 대사의 위치나 복사 오류가 발생하여 수정작업도 많이 발생.
+
+시스템구성 :
+
+1. 번역가 : 한국어 웹툰 번역 -> 영어, 중국어, 일본어 등.
+   CoMaTo Note - 한국어 원본 웹툰 이미지를 보면서, 말풍선이 비워진 웹툰 이미지 위에
+   번역된 대사를 입력하는 프로그램. (Windows 7/10, C#, WPF)
+
+2. 만화가 : 번역 텍스트 자동 입력후, 웹툰 의성어, 의태어, 효과음 등의 이미지화 텍스트 리터칭.
+   CoMaTo Scripts - Adobe PhotoShop 에서 말풍선이 비워진 이미지 위에,
+   노트에서 번역된 외국어 대사를 각각의 말풍선 위치로 불러오는 포토샵 플러그인. (PhotoShop, JavaScript)
+
+3. 검수가 : 번역 및 리터칭 완료된 웹툰 검수후 납품.
+   CoMaTo Planner - 네이버 웹툰에서 매주 의뢰받는 작품들의 이미지와 회차정보 등을,
+   웹으로 등록하여 통합관리. (Ubuntu 14.04 LTS, Django, Python, MySQL)

@@ -34,7 +34,7 @@ const Layout = ({ pageTitle, children }) => {
             <p class="site-info">
               <span class="copyright">
                 &copy; {new Date().getFullYear()}, KimPD. All rights reserved.
-                Built with {`   `} <a href="https://www.gatsbyjs.com" target="_blank">Gatsby</a>
+                Built with {`   `} <a href="https://www.gatsbyjs.com" target="_blank" rel="noreferrer">Gatsby</a>
               </span>
             </p>
             <a id="to-top" class="to-top" href="#page">

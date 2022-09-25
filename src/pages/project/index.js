@@ -36,14 +36,23 @@ export const query = graphql`
     ) {
       nodes {
         frontmatter {
-          date(formatString: "MMMM D, YYYY")
-          title
           category
-          hero_image {
+          title
+          subject
+          date(formatString: "YYYY년 MM월")
+          dev_period
+          dev_os
+          dev_tech
+          icon {
             childImageSharp {
               gatsbyImageData
             }
           }  
+          image {
+            childImageSharp {
+              gatsbyImageData
+            }
+          }
         }
         id
         slug

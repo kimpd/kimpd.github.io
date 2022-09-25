@@ -62,7 +62,7 @@ function Header({ pageTitle }) {
                       pageTitle === page.title
                       ? 
                         <li class="menu-item current-menu-item">
-                          <div class="cursor">{page.menu}</div>     
+                          <div class="cursor"><a href={page.link}>{page.menu}</a></div>     
                         </li>
                       : 
                         <li class="menu-item">
